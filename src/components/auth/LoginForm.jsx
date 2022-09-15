@@ -3,9 +3,12 @@ import {View, StyleSheet, Text, TextInput, Button, Keyboard} from 'react-native'
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
 import { user, userDetails } from '../../utils/userDB';
+import useAuth from '../../hooks/useAuth';
 
 const LoginForm = () => {
     const [Errors, setErrors] = useState("");
+    const { login } = useAuth()
+    
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: Yup.object(validationSchema()),
@@ -18,6 +21,7 @@ const LoginForm = () => {
             } else{
                 console.log('login correcto')
                 console.log(userDetails)
+                login(userDetails)
             }
         },
         

@@ -2,11 +2,15 @@ import React from 'react'
 import { StatusBar} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import Navigation from './src/navigation/Navigation'
+import { AuthProvider } from './src/context/AuthContext';
 export default function App() {
   return (
+
     <NavigationContainer>
-      <StatusBar />
-        <Navigation />
+      <AuthProvider>
+        <StatusBar />
+          <Navigation />
+      </AuthProvider>
     </NavigationContainer>
   );
 }
