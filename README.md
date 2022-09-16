@@ -1,5 +1,5 @@
 # APP POKEDEX
-App Pokedex, esta app desarrollada en React Native, tiene la funcionalidad de listar los pokemon y mostrar los detalles de cada uno, diferenciandolos por tipos, en la vista de detalle de pokemon se podra apreciar una imagen y sus stats, tambien se puede agregar a un apartado a tus pokemon favoritos.
+La app esta desarrollada en React Native, tiene la funcionalidad de listar los pokemon y mostrar los detalles de cada uno diferenciandolos por tipos. En la vista de detalle de pokemon se podra apreciar una imagen y sus stats, tambien se puede agregar a un apartado a tus pokemon favoritos.
 
 ## _Deploy_
 - [Android] - [ Descargar APK para android ](https://expo.dev/artifacts/eas/7Z7av73fu3eAeAckpQAKcL.apk)
