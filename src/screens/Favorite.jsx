@@ -9,7 +9,7 @@ import NotLoged from '../components/NotLoged';
 export default function Favorite() {
     const { auth } = useAuth();
     const [Pokemons, setPokemons] = useState([]);
-  
+    
     useFocusEffect(
         useCallback(() => {
             if (auth) {
@@ -33,10 +33,10 @@ export default function Favorite() {
     
         }, [auth])
     )
-
+  
     return (
         <SafeAreaView>
-            {!auth ? (<NotLoged />) : (<PokemonList pokemons={Pokemons} />)}
+            {!auth ? (<NotLoged />) : Pokemons.length === 0 ? null : (<PokemonList pokemons={Pokemons} />)}
 
 
         </SafeAreaView>
