@@ -5,7 +5,8 @@ import { FAVORITE_STORAGE } from '../utils/contants'
 
 export async function addPokemonFavoriteApi(id){
     try {
-        const favorites= await getPokemonsFavoriteApi();
+        const favorites= await getPokemonsFavoriteApi() || [];
+        console.log(favorites)
         favorites.push(id)
         await AsyncStorage.setItem(FAVORITE_STORAGE, JSON.stringify(favorites))
     } catch (error) {
