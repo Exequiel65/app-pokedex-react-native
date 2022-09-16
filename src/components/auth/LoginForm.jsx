@@ -19,8 +19,6 @@ const LoginForm = () => {
             if (username !== user.userName || password !== user.password ) {
                 setErrors('credenciales incorrectas')
             } else{
-                console.log('login correcto')
-                console.log(userDetails)
                 login(userDetails)
             }
         },

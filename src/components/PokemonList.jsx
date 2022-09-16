@@ -4,7 +4,7 @@ import PokemonCard from './PokemonCard'
 
 
 export default function PokemonList(props) {
-  const { pokemons, loadPokemons, isNext } = props
+  const { pokemons, loadPokemons, isNext, load } = props
   const loadMore = ()=>{
     loadPokemons();
   }
@@ -18,12 +18,14 @@ export default function PokemonList(props) {
       contentContainerStyle={styles.flatListContain}
       onEndReached={isNext && loadMore}
       onEndReachedThreshold={0.1}
-      ListFooterComponent={
+      
+      ListFooterComponent={ load ?
         <ActivityIndicator
           size='large'
           style={styles.spinner}
           color='#AEAEAE'
-        />
+        /> : 
+        <View style={{height: 100}}></View>
       }
     />
   )
