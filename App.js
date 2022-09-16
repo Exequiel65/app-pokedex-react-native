@@ -8,8 +8,12 @@ export default function App() {
 
     <NavigationContainer>
       <AuthProvider>
-        <StatusBar />
-          <Navigation />
+        <StatusBar
+          barStyle='dark-content'
+          backgroundColor="#FFFFFF"
+        />
+
+        <Navigation />
       </AuthProvider>
     </NavigationContainer>
   );
